@@ -1,0 +1,15 @@
+const configuration = {
+  "cointelegraph": {
+    "author": ".post-meta__author-name",
+    "heroImage": "picture img",
+    "publishDate": "div.post-meta__publish-date",
+    "title": "h1.post__title",
+    "description": "p[itemprop='description']"
+},
+"Markets Daily": {
+    "author": "meta[name='author']",
+    "heroImage": "meta[property='og:image']",
+    "publishDate": "meta[property='og:article:published_time']",
+    "title": "meta[property='og:title']",
+    "description": "meta[property='og:description']"
+}
