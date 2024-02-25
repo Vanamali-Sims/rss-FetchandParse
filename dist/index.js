@@ -71,9 +71,30 @@ function executeRSSFeed(url) {
             case websites_1.websites.FEEDBURNER:
                 yield fetchAndParseRSS(url);
                 break;
-            // case websites.BLOCKCHAINNEWS :
-            //   await fetchAndParseRSS(url);
-            //   break;
+            case websites_1.websites.BITCOIN4U:
+                yield fetchAndParseRSS(url);
+                break;
+            case websites_1.websites.BITCOINCHASER:
+                yield fetchAndParseRSS(url);
+                break;
+            case websites_1.websites.BITCOINCORE:
+                yield fetchAndParseRSS(url);
+                break;
+            case websites_1.websites.BITCOINEXCHANGEGUIDE:
+                yield fetchAndParseRSS(url);
+                break;
+            case websites_1.websites.BITCOINGOLDPRICE:
+                yield fetchAndParseRSS(url);
+                break;
+            case websites_1.websites.BITCOINIK:
+                yield fetchAndParseRSS(url);
+                break;
+            case websites_1.websites.BITCOINIST:
+                yield fetchAndParseRSS(url);
+                break;
+            case websites_1.websites.BITCOINNFT:
+                yield fetchAndParseRSS(url);
+                break;
             default:
                 console.error('Unsupported RSS feed URL:', url);
                 break;
