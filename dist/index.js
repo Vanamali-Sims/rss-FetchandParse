@@ -59,40 +59,16 @@ function fetchAndParseRSS(url) {
 function executeRSSFeed(url) {
     return __awaiter(this, void 0, void 0, function* () {
         switch (url) {
-            case websites_1.websites.CRYPTOCURRENCYNEWS:
-                yield fetchAndParseRSS(url);
-                break;
-            case websites_1.websites.CRYPTOMINING:
-                yield fetchAndParseRSS(url);
-                break;
-            case websites_1.websites.CRYPTOQUARRTET:
-                yield fetchAndParseRSS(url);
-                break;
-            case websites_1.websites.FEEDBURNER:
-                yield fetchAndParseRSS(url);
-                break;
-            case websites_1.websites.BITCOIN4U:
-                yield fetchAndParseRSS(url);
-                break;
             case websites_1.websites.BITCOINCHASER:
                 yield fetchAndParseRSS(url);
                 break;
-            case websites_1.websites.BITCOINCORE:
-                yield fetchAndParseRSS(url);
-                break;
-            case websites_1.websites.BITCOINEXCHANGEGUIDE:
-                yield fetchAndParseRSS(url);
-                break;
-            case websites_1.websites.BITCOINGOLDPRICE:
+            case websites_1.websites.FEEDBURNER:
                 yield fetchAndParseRSS(url);
                 break;
             case websites_1.websites.BITCOINIK:
                 yield fetchAndParseRSS(url);
                 break;
             case websites_1.websites.BITCOINIST:
-                yield fetchAndParseRSS(url);
-                break;
-            case websites_1.websites.BITCOINNFT:
                 yield fetchAndParseRSS(url);
                 break;
             default:

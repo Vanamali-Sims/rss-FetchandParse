@@ -61,40 +61,11 @@ async function fetchAndParseRSS(url: string): Promise<void> {
 async function executeRSSFeed(url: string): Promise<void> {
   switch (url) {
     
-    
-    case websites.CRYPTOCURRENCYNEWS :
-      await fetchAndParseRSS(url);
-      break;
-
-    case websites.CRYPTOMINING :
-      await fetchAndParseRSS(url);
-      break;
-
-    case websites.CRYPTOQUARRTET :
-      await fetchAndParseRSS(url);
-      break;
-    
-    case websites.FEEDBURNER :
-      await fetchAndParseRSS(url);
-      break;
-
-    case websites.BITCOIN4U:
-      await fetchAndParseRSS(url);
-      break;
-
     case websites.BITCOINCHASER :
       await fetchAndParseRSS(url);
       break;
-    
-    case websites.BITCOINCORE :
-      await fetchAndParseRSS(url);
-      break;
-
-    case websites.BITCOINEXCHANGEGUIDE:
-      await fetchAndParseRSS(url);
-      break;
-
-    case websites.BITCOINGOLDPRICE :
+  
+    case websites.FEEDBURNER :
       await fetchAndParseRSS(url);
       break;
     
@@ -105,10 +76,8 @@ async function executeRSSFeed(url: string): Promise<void> {
     case websites.BITCOINIST :
       await fetchAndParseRSS(url);
       break;
-
-    case websites.BITCOINNFT:
-      await fetchAndParseRSS(url);
-      break;
+    
+  
     
     default:
       console.error('Unsupported RSS feed URL:', url);

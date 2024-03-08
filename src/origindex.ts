@@ -32,17 +32,10 @@ function fetchAndParseRSS(url: string): Promise<void> {
             // Parse data based on the website URL
             switch (url) {
               // case websites.BLOCKCHAINNEWS:
-              //   parseBlockchainNews(rssItem, item, index);
+              //  parseBlockchainNews(rssItem, item, index);
               //   break;
-              case websites.CRYPTOCURRENCYNEWS:
-                parseCryptocurrencyNews(rssItem, item, index);
-                break;
-              case websites.CRYPTOMINING:
-                parseCryptominingNews(rssItem, item, index);
-                break;
-              case websites.CRYPTOQUARRTET:
-                parseCryptoquarrtetNews(rssItem, item, index);
-                break;
+            
+              
               case websites.FEEDBURNER:
                 parseFeedburnerNews(rssItem, item, index);
                 break;
