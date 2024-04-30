@@ -18,7 +18,7 @@ var websites;
     websites["BITFINEX_BLOG"] = "https://blog.bitfinex.com/feed";
     websites["BITCOIN_NEWS"] = "https://news.bitcoin.com/feed";
     websites["MEDIUM_COINMONKS"] = "https://medium.com/feed/coinmonks";
-    websites["CRYPTOGENIUS"] = "https://cryptogeni.us/feed";
+    websites["CRYPTOGENI"] = "https://cryptogeni.us/feed";
     websites["COINLABZ"] = "https://coinlabz.com/feed";
     websites["COINZENE"] = "https://coinzene.com/feed";
     websites["THECRYPTOTIME"] = "https://thecryptotime.com/feed";
@@ -33,5 +33,5 @@ var websites;
     websites["CRYPTOPOTATO"] = "https://cryptopotato.com/feed/";
     websites["COINSPEAKER_NEWS"] = "https://www.coinspeaker.com/news/feed/";
     websites["NEWSBTC"] = "https://www.newsbtc.com/feed/";
-    websites["CRYPTODAILY"] = "https://cryptodaily.co.uk/?utm_source=feedspot";
+    websites["CRYPTODAILY"] = "https://cryptodaily.co.uk/?utm_source=feedspot"; //nah
 })(websites || (exports.websites = websites = {}));

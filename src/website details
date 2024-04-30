@@ -1,29 +1,28 @@
-bitpinas.com/feed
-bitcoinmarketjournal.com/feed  
-trustnodes.com/feed 
-bitcoinnews.com/feed 
+bitpinas.com/feed                               ok
+bitcoinmarketjournal.com/feed                   ok
+trustnodes.com/feed                            not ok
+bitcoinnews.com/feed                            ok
 coinidol.com/rss2
-coincheckup.com/blog/feed
-blog.bitmex.com/feed
-cryptoslate.com/feed   
-blog.bitfinex.com/feed
-news.bitcoin.com/feed  
+coincheckup.com/blog/feed                   oke not ok some
+blog.bitmex.com/feed                       not  ok langprob
+cryptoslate.com/feed                            ok
+blog.bitfinex.com/feed                          ok
+news.bitcoin.com/feed                           ok
 medium.com/feed/coinmonks
-cryptogeni.us/feed
-coinlabz.com/feed
-coinzene.com/feed
-thecryptotime.com/feed
-blog.funexclub.com/feed
+cryptogeni.us/feed                              ok
+coinlabz.com/feed                               ok
+coinzene.com/feed                               ok
+thecryptotime.com/feed                          ok
+blog.funexclub.com/feed                         ok
 coinbackyard.com/feed
 allincrypto.com/feed 
-coinbold.io/feed 
+coinbold.io/feed                                ok
 swaps.app/blog
-bestaicryptocurrency.com/feed 
+bestaicryptocurrency.com/feed                   ok
 cryptobriefing.com/feed 
 99bitcoins.com/feed
-
 https://cryptopotato.com/feed/
 https://www.coinspeaker.com/news/feed/
-https://www.newsbtc.com/feed/
-https://bitcoinmagazine.com/.rss/full/
+https://www.newsbtc.com/feed/                   ok
+https://bitcoinmagazine.com/.rss/full/          ok
 https://cryptodaily.co.uk/?utm_source=feedspot

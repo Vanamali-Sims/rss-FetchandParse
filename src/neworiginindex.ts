@@ -46,7 +46,7 @@ function fetchAndParseRSS(url: string): Promise<void> {
             console.log('------------------------------------------');
           });
 
-          resolve(); // Resolve the promise when parsing is done
+          resolve(); 
         });
       })
       .catch(error => {
@@ -74,7 +74,7 @@ function executeRSSFeed(url: string): Promise<void> {
       case websites.BITFINEX_BLOG:
       case websites.BITCOIN_NEWS:
       case websites.MEDIUM_COINMONKS:
-      case websites.CRYPTOGENIUS:
+      case websites.CRYPTOGENI:
       case websites.COINLABZ:
       case websites.COINZENE:
       case websites.THECRYPTOTIME:
@@ -90,6 +90,7 @@ function executeRSSFeed(url: string): Promise<void> {
       case websites.COINSPEAKER_NEWS:
       case websites.NEWSBTC:
       case websites.CRYPTODAILY:
+        
 
         fetchAndParseRSS(url)
           .then(() => resolve())
@@ -102,10 +103,10 @@ function executeRSSFeed(url: string): Promise<void> {
   });
 }
 
-// Execute RSS feed parsing for each URL
+
 const promises = rssFeedUrls.map(url => executeRSSFeed(url));
 
-// Wait for all promises to resolve
+
 Promise.all(promises)
   .then(() => {
     console.log("All RSS feeds fetched and parsed successfully.");

@@ -186,10 +186,10 @@ function parseCryptocurrencyNews(rssItem: RSSItem, item: any, index: number) {
 }
 
 
-// Execute RSS feed parsing for each URL
+
 const promises = rssFeedUrls.map(url => fetchAndParseRSS(url));
 
-// Wait for all promises to resolve
+
 Promise.all(promises)
   .then(() => {
     console.log("All RSS feeds fetched and parsed successfully.");
