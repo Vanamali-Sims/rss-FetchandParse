@@ -405,7 +405,7 @@ function fetchAndParseBitcoinik() {
     });
 }
 function fetchAndParseNewsBitcoin() {
-    const url = websites_1.websites.BITCOIN_NEWS;
+    const url = websites_1.websites.BITCOINNEWS;
     return new Promise((resolve, reject) => {
         axios_1.default.get(url)
             .then(response => {
@@ -640,7 +640,12 @@ function fetchAndParseNewsBtc() {
                     // Parse description HTML with cheerio to extract text and image URL
                     const $ = cheerio.load(rssItem.description);
                     const descriptionText = $.root().text().trim(); // Extracting all text from description HTML
-                    const imageUrl = $('img').attr('src') || 'No image URL available';
+                    // const mediaContent = item['media:content'][0];
+                    // const $media = cheerio.load(mediaContent);
+                    // const imageUrl = $media('media\\:content').attr('url');
+                    const mediaContent = item['media:content'][0];
+                    const imageUrl = mediaContent.$.url;
+                    // const imageUrl = $('img').attr('src') || 'No image URL available';
                     const pubDate = item.pubDate ? item.pubDate[0] : 'Unknown publish date';
                     const author = item['dc:creator'] ? item['dc:creator'][0] : 'Unknown author';
                     // Display the extracted information
@@ -800,7 +805,7 @@ function fetchAndParseBitcoinIst() {
     });
 }
 function fetchAndParseAllInCrypto() {
-    const url = websites_1.websites.NEWSBTC; // Use the new website's RSS feed URL here
+    const url = websites_1.websites.ALLINCRYPTO; // Use the new website's RSS feed URL here
     return new Promise((resolve, reject) => {
         axios_1.default.get(url)
             .then(response => {
@@ -884,23 +889,64 @@ function fetchAndParseBitcoinMagazine() {
         });
     });
 }
+function fetchAndParseBitcoinChaser() {
+    const url = websites_1.websites.BITCOINCHASER;
+    return new Promise((resolve, reject) => {
+        axios_1.default.get(url)
+            .then(response => {
+            (0, xml2js_1.parseString)(response.data, (err, result) => {
+                if (err) {
+                    console.error('Error parsing XML for Bitcoin News', err);
+                    reject(err);
+                    return;
+                }
+                const items = result.rss.channel[0].item;
+                items.forEach((item, index) => {
+                    const rssItem = {
+                        link: item.link[0],
+                        title: item.title[0],
+                        description: item.description[0]
+                    };
+                    const $ = cheerio.load(rssItem.description);
+                    const descriptionText = $.root().text().trim(); // Extracting all text from description HTML
+                    const pubDate = item.pubDate ? item.pubDate[0] : '';
+                    const author = item['dc:creator'] ? item['dc:creator'][0] : 'Unknown';
+                    const imageUrl = $('img').attr('src');
+                    console.log(`Bitcoin Market Journal - Item ${index + 1}:`);
+                    console.log(`Title: ${rssItem.title}`);
+                    console.log(`Author: ${author}`);
+                    console.log(`Description: ${descriptionText}`);
+                    console.log(`Publish Date: ${pubDate}`);
+                    console.log(`Website: ${rssItem.link}`);
+                    console.log(`Image URL: ${imageUrl}`);
+                    console.log('------------------------------------------');
+                });
+                resolve();
+            });
+        })
+            .catch(error => {
+            console.error('Error fetching Bitcoin Market Journal RSS feed', error.message);
+            reject(error);
+        });
+    });
+}
 // fetchAndParseNewsbtc()  /no image
 // fetchAndParseCoinzene() // no image
 // fetchAndParseCoinbackyard()//no image
 // fetchAndParseBitPinas() //no image
 // fetchAndParseCoinLabz() //no image
 // fetchAndParseCoinMonks()
-// fetchAndParseAllInCrypto()
+// fetchAndParseAllInCrypto()s
 // fetchAndParseCoinCheckup()//no image
-//fix image - below
-fetchAndParseNewsBtc();
+fetchAndParseBitcoinChaser();
 //Working Perfectly - below
-// fetchAndParseBitcoinik()
-// fetchAndParseCryptogeni()
-// fetchAndParseNewsBitcoin()
-// fetchAndParseBitcoinNews()
-// fetchAndParseBitcoinMarkethJournal()
-// fetchAndParseTrustNodes()
-// fetchAndParseBitcoinMagazine()
-// fetchAndParseBitcoinIst()
-// fetchAndParseFunexBlog() few items do not have images
+fetchAndParseNewsBtc();
+fetchAndParseBitcoinik();
+fetchAndParseCryptogeni();
+fetchAndParseNewsBitcoin();
+fetchAndParseBitcoinNews();
+fetchAndParseBitcoinMarkethJournal();
+fetchAndParseTrustNodes();
+fetchAndParseBitcoinMagazine();
+fetchAndParseBitcoinIst();
+fetchAndParseFunexBlog(); //few items do not have images

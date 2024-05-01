@@ -1,14 +1,98 @@
-const cheerio = require('cheerio');
+import cheerio from 'cheerio';
 
-// XML content containing the HTML
-const xmlContent = `<div class="guten-2TJWA3 gutenverse-image-box guten-element style-default"><div class="image-box-header"><img fetchpriority="high" decoding="async" class="gutenverse-image-box-filled" src="https://i0.wp.com/cryptogeni.us/wp-content/uploads/2024/04/523437864.jpg?resize=840%2C560&#038;ssl=1" height="560" width="840" data-recalc-dims="1" /></div><div class="image-box-body"><div class="body-inner"><h3 class="body-title icon-position-before"><i></i><span><a href="https://cointelegraph.com/news/dogecoin-copies-bitcoin-ordinals-runestone-nft-airdrop" target="_blank" rel="noopener nofollow">Dogecoin Bitcoin Runestone: The Cryptocurrency World&#8217;s Exciting New Chapter</a></span></h3><p class="body-description"><p>Dogecoin Bitcoin Runestone, an expression previously tied exclusively to the &#8216;Runestone&#8217; series of Bitcoin Ordinals, has recently found its way into the Dogecoin blockchain user community. This group has chosen to model this series as a means of rewarding Doginal holders, thereby injecting a novel layer of dynamism into the scene of digital currencies. This adoption of the &#8216;Runestone&#8217; series by Dogecoin users not only signifies the escalating popularity and clout of Dogecoin but also its promising foray into the exclusive NFT sector, a realm typically monopolized by Bitcoin. It&#8217;s a testament to the constantly changing face of the cryptocurrency universe where Dogecoin Bitcoin Runestone could potentially emerge as the next sensation. The intriguing narrative of Dogecoin Bitcoin Runestone is a clear reflection of the fluidity and adaptability that characterizes the cryptocurrency world, where innovation is always around the corner. As the Dogecoin community continues to embrace the &#8216;Runestone&#8217; series, it&#8217;s evident that this digital currency is not just riding the waves but creating its own. It&#8217;s a bold statement of intent from a cryptocurrency once considered a &#8216;joke&#8217;, now transforming into a serious player within the digital currency arena. The Dogecoin Bitcoin Runestone phenomenon underscores the thrilling unpredictability of the crypto space, where shifts in power and influence can occur in an instant, paving the way for new leaders and trendsetters. As Dogecoin continues to challenge Bitcoin&#8217;s dominance in the NFT sector and beyond, it will be interesting to see how the landscape evolves in response to these groundbreaking developments. The Dogecoin Bitcoin Runestone narrative serves as a compelling reminder of the ever-changing dynamics within the cryptocurrency world, reinforcing the notion that the only constant in this digital universe is change. This 500-word summary captures the essence of the exciting evolution of Dogecoin Bitcoin Runestone, encapsulating the transformative power of innovation within the cryptocurrency sphere. It&#8217;s a fascinating tale of how Dogecoin, once a fringe player, is now at the forefront of a significant shift in the crypto world, giving rise to a new digital currency era where Dogecoin Bitcoin Runestone could indeed be the new game-changer.</p><br /><p><small><i><b>Not financial advice.</b> We are not the owner of airdrop projects listed on our website. We do simple research and provide links to the airdrop. Even though we do our best to list only trustworthy projects, some projects may be a scam. Never send anyone your private key or any money. As with anything related to cryptocurrencies: Do Your Own Research..DYOR..DYOR..DYOR!</i></small></p><br /><a href="https://cointelegraph.com/news/dogecoin-copies-bitcoin-ordinals-runestone-nft-airdrop" target="_blank" rel="noopener nofollow">Source article&#8230;</a></p></div></div></div>
-<p>The post <a href="https://cryptogeni.us/cryptocurrency_news_and_updates/dogecoin-bitcoin-runestone-the-cryptocurrency-worlds-exciting-new-chapter/">Dogecoin Bitcoin Runestone: The Cryptocurrency World&#8217;s Exciting New Chapter</a> appeared first on <a href="https://cryptogeni.us">Crypto Genius™</a>.</p>`;
+// // Function to extract image URL from the RSS feed item
+// const extractImageUrl = (xmlContent: string): string | null => {
+//     // Load the XML content into cheerio
+//     const $ = cheerio.load(xmlContent, { xmlMode: true });
 
-// Load the XML content into Cheerio
-const $ = cheerio.load(xmlContent);
+//     // Locate the content:encoded section within the item
+//     const contentEncoded = $('item > content\\:encoded').html();
 
-// Extract the src attribute of the img tag
-const imageUrl = $('div.image-box-header img').attr('src');
+//     if (contentEncoded) {
+//         // Parse the HTML content from the content:encoded section
+//         const content = cheerio.load(contentEncoded);
 
-// Log the extracted image URL
-console.log('Image URL:', imageUrl);
+//         // Find the figure tag and the img tag within it
+//         const imgElement = content('figure img');
+
+//         // Get the src attribute of the img tag
+//         const imageUrl = imgElement.attr('src');
+
+//         // Return the image URL or null if not found
+//         return imageUrl || null;
+//     }
+
+//     // Return null if the content:encoded section is not found
+//     return null;
+// };
+
+// // Sample XML content (RSS feed)
+// const xmlContent = `
+// <?xml version="1.0" encoding="UTF-8"?>
+// <rss version="2.0"
+//     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+//     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+//     xmlns:dc="http://purl.org/dc/elements/1.1/"
+//     xmlns:atom="http://www.w3.org/2005/Atom"
+//     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+//     xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+
+// <channel>
+//     <title>BitcoinChaser</title>
+//     <atom:link href="https://bitcoinchaser.com/feed/" rel="self" type="application/rss+xml" />
+//     <link>https://bitcoinchaser.com</link>
+//     <description>Chasing the Bitcoin Dream!</description>
+//     <lastBuildDate>Wed, 24 Apr 2024 08:07:26 +0000</lastBuildDate>
+//     <language>en-US</language>
+//     <sy:updatePeriod>hourly</sy:updatePeriod>
+//     <sy:updateFrequency>1</sy:updateFrequency>
+//     <generator>https://wordpress.org/?v=6.5.2</generator>
+
+//     <item>
+//         <title>Win Big with Bitsler’s Jackpot 30% Rakeback</title>
+//         <link>https://bitcoinchaser.com/bitslers-jackpot-30-rakeback/</link>
+//         <comments>https://bitcoinchaser.com/bitslers-jackpot-30-rakeback/#respond</comments>
+//         <dc:creator><![CDATA[Bitcoin Chaser]]></dc:creator>
+//         <pubDate>Wed, 24 Apr 2024 08:00:39 +0000</pubDate>
+//         <category><![CDATA[Bonus Events]]></category>
+//         <guid isPermaLink="false">https://bitcoinchaser.com/?p=89727</guid>
+//         <description><![CDATA[<p>Join Bitsler's Jackpot that gives you the opportunity to win big and at the same time claim a 30% rakeback.</p>
+//         <p>The post <a href="https://bitcoinchaser.com/bitslers-jackpot-30-rakeback/">Win Big with Bitsler’s Jackpot 30% Rakeback</a> appeared first on <a href="https://bitcoinchaser.com">BitcoinChaser</a>.</p>]]></description>
+//         <content:encoded><![CDATA[
+//             <p>Bitsler, a leading online crypto-gambling site, is running a special promotion until the end of April by offering a 30% rakeback bonus to anyone who opts into a Jackpot on any of Bitsler's original games.</p>
+//             <figure class="wp-block-image size-full">
+//                 <img data-dominant-color="45506d" data-has-transparency="false" style="--dominant-color: #45506d;" fetchpriority="high" decoding="async" width="800" height="288" src="https://bitcoinchaser.com/wp-content/uploads/2024/04/bitsler-games__800-jpg.webp" alt="Bitsler games" />
+//                 <figcaption class="wp-element-caption">A selection of Bitsler's original games you can claim the rakeback bonus on.</figcaption>
+//             </figure>
+//             <!-- More HTML content can be here -->
+//         ]]></content:encoded>
+//         <wfw:commentRss>https://bitcoinchaser.com/bitslers-jackpot-30-rakeback/feed/</wfw:commentRss>
+//         <slash:comments>0</slash:comments>
+//     </item>
+// </channel>
+// </rss>
+// `;
+
+// const imageUrl = extractImageUrl(xmlContent);
+// console.log('Extracted image URL:', imageUrl);
+
+
+// Sample HTML snippet
+const htmlSnippet = `
+<figure class="wp-block-image size-full">
+    <img data-dominant-color="45506d" data-has-transparency="false" style="--dominant-color: #45506d;" fetchpriority="high" decoding="async" width="800" height="288" src="https://bitcoinchaser.com/wp-content/uploads/2024/04/bitsler-games__800-jpg.webp" alt="Bistler games that you can win the rakeback on" class="not-transparent wp-image-89754" srcset="https://bitcoinchaser.com/wp-content/uploads/2024/04/bitsler-games__800-jpg.webp 800w, https://bitcoinchaser.com/wp-content/uploads/2024/04/bitsler-games__800-300x108.webp 300w, https://bitcoinchaser.com/wp-content/uploads/2024/04/bitsler-games__800-768x276.webp 768w" sizes="(max-width: 800px) 100vw, 800px" />
+    <figcaption class="wp-element-caption">A selection of Bitslers original games you can claim the rakeback bonus on.</figcaption>
+</figure>
+`;
+
+// Parse the HTML snippet
+const $ = cheerio.load(htmlSnippet);
+
+// Use CSS selector to find the img element inside the figure element with the given class
+const imgElement = $('figure.wp-block-image.size-full img');
+
+// Extract the src attribute (URL)
+const imgUrl = imgElement.attr('src');
+
+// Log the extracted URL
+console.log('Extracted Image URL:', imgUrl);

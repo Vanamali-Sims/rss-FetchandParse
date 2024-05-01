@@ -6,7 +6,9 @@
   "scripts": {
     "start" : "tsc && node dist/index.js",
     "startind" : "tsc && node dist/induFunc.js",
-    "test": "tsc && node dist/test.js"
+    "test": "tsc && node dist/test.js",
+    "coderun": "tsc && node dist/coderun.js",
+    "origin": "tsc && node dist/origindex.js"
   },
   "keywords": [],
   "author": "",
