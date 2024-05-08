@@ -934,19 +934,19 @@ function fetchAndParseBitcoinChaser() {
 // fetchAndParseCoinzene() // no image
 // fetchAndParseCoinbackyard()//no image
 // fetchAndParseBitPinas() //no image
-// fetchAndParseCoinLabz() //no image
+fetchAndParseCoinLabz(); //no image
 // fetchAndParseCoinMonks()
 // fetchAndParseAllInCrypto()s
 // fetchAndParseCoinCheckup()//no image
-fetchAndParseBitcoinChaser();
+// fetchAndParseBitcoinChaser()
 //Working Perfectly - below
-fetchAndParseNewsBtc();
-fetchAndParseBitcoinik();
-fetchAndParseCryptogeni();
-fetchAndParseNewsBitcoin();
-fetchAndParseBitcoinNews();
-fetchAndParseBitcoinMarkethJournal();
-fetchAndParseTrustNodes();
-fetchAndParseBitcoinMagazine();
-fetchAndParseBitcoinIst();
-fetchAndParseFunexBlog(); //few items do not have images
+// fetchAndParseNewsBtc()
+// fetchAndParseBitcoinik()
+// fetchAndParseCryptogeni()
+// fetchAndParseNewsBitcoin()
+// fetchAndParseBitcoinNews()
+// fetchAndParseBitcoinMarkethJournal()
+// fetchAndParseTrustNodes()
+// fetchAndParseBitcoinMagazine()
+// fetchAndParseBitcoinIst()
+// fetchAndParseFunexBlog() //few items do not have images

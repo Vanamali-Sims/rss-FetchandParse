@@ -38,3 +38,9 @@ console.log(feed); // Parsed RSS feed data
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+ <!-- toDo -->
+<!-- Coindesk
+Cointelegraph
+AMBCrypto
+Decrypt
+Coinpedia -->

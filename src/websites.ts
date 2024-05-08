@@ -11,7 +11,7 @@ export enum websites {
     COINCHECKUP = 'https://coincheckup.com/blog/feed',//
     BITMEX_BLOG = 'https://blog.bitmex.com/feed',//nah
     CRYPTOSLATE = 'https://cryptoslate.com/feed',
-    BITFINEX_BLOG = 'https://blog.bitfinex.com/feed',//have to edit description
+    BITFINEX_BLOG = 'https://blog.bitfinex.com/feed',//have to edit descri ption
     BITCOIN_NEWS = 'https://news.bitcoin.com/feed', //
     MEDIUM_COINMONKS = 'https://medium.com/feed/coinmonks', // nah
     CRYPTOGENI = 'https://cryptogeni.us/feed', //
@@ -22,7 +22,7 @@ export enum websites {
     COINBACKYARD = 'https://coinbackyard.com/feed', //
     ALLINCRYPTO = 'https://allincrypto.com/feed', //nah
     COINBOLD = 'https://coinbold.io/feed', //nah
-    SWAPS_BLOG = 'https://swaps.app/blog', //nah
+    SWAPS_BLOG = 'https://swaps.app/blog', //ignore for now, email sub
     BESTAICRYPTOCURRENCY = 'https://bestaicryptocurrency.com/feed',
     CRYPTOBRIEFING = 'https://cryptobriefing.com/feed', //nah
     BITCOINMAGAZINE = 'https://bitcoinmagazine.com/.rss/full/',
